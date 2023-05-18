@@ -77,11 +77,11 @@ public class ConverterController {
             switch (ex.getRawStatusCode()) {
                 case 403:
                     apiResponse.setResponseCode("403");
-                    apiResponse.setResponseMessage("The token either does not have free conversion minutes or was not found in the database.");
+                    apiResponse.setResponseMessage("Please check the token or time stamp");
                     return ResponseEntity.status(Integer.valueOf(apiResponse.getResponseCode())).body(apiResponse);
                 case 500:
                     apiResponse.setResponseCode("500");
-                    apiResponse.setResponseMessage("Online Convert Free Service Are Down");
+                    apiResponse.setResponseMessage("OCFService Are Down");
                     return ResponseEntity.status(Integer.valueOf(apiResponse.getResponseCode())).body(apiResponse);
                 default:
                     apiResponse.setResponseCode("500");
@@ -141,11 +141,11 @@ public class ConverterController {
             switch (ex.getRawStatusCode()) {
                 case 403:
                     apiResponse.setResponseCode("403");
-                    apiResponse.setResponseMessage("The token either does not have free conversion minutes or was not found in the database.");
+                    apiResponse.setResponseMessage("Please check the token or the time stamp");
                     return ResponseEntity.status(Integer.valueOf(apiResponse.getResponseCode())).body(apiResponse);
                 case 500:
                     apiResponse.setResponseCode("500");
-                    apiResponse.setResponseMessage("Online Convert Free Service Are Down");
+                    apiResponse.setResponseMessage("OCF Service Are Down");
                     return ResponseEntity.status(Integer.valueOf(apiResponse.getResponseCode())).body(apiResponse);
                 default:
                     apiResponse.setResponseCode("500");
@@ -169,11 +169,3 @@ public class ConverterController {
     }
 
 }
-/*
- *
- {
-    "responseCode": "200",
-    "responseMessage": "File Converted successfully",
-    "results": "https://back.onlineconvertfree.com/upload/converter/100523/k7P9iQP/business-proposal.xml"
-}
- */
