@@ -1,0 +1,2 @@
+
+rm -rf /opt/tomcat/webapps/pdfsolutions_apis* && ls -ltr /opt/tomcat/webapps/ && cd /opt/code/pdfsolutions && git pull && mvn clean install && mv /opt/code/pdfsolutions/target/pdfsolutions_apis.war /opt/tomcat/webapps/ && tail -f /opt/logs/pdfsolutions/logger.log
