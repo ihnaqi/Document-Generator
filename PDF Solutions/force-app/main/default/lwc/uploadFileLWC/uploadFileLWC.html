@@ -1,0 +1,20 @@
+<template>
+    <div class="exampleHolder" if:true={showSpinner}>
+       <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </div>
+    <lightning-card title="PDF Solution">
+       <div class="slds-form-element__control">
+          <div class="slds-file-selector slds-file-selector_files">
+             <div class="slds-file-selector__dropzone">
+                <div>
+                   <lightning-input label='Attach file here' name="file uploader" onchange ={handleUploadFinished} type="file" accept={acceptedFormats}></lightning-input>
+                </div>
+                <br/>
+             </div>
+          </div>
+       </div>
+       <br/>
+    </lightning-card>
+    
+       
+ </template>
